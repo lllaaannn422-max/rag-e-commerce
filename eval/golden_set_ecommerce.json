@@ -1,0 +1,711 @@
+{
+  "description": "星曜商城电商客服金标准评测集：售前（pre_sales）/售后（after_sales）/活动（promotion）/对比（comparison）共 64 题。语料覆盖星曜模拟语料与真实公开语料（Redmi K80 手册/FAQ、京东售后政策、退货运费退款、配送时效、价保、活动优惠规则、手机数码售后细则）。order_status/escalation/chitchat 意图绕过 RAG 检索，由 API 冒烟测试覆盖。fragments 均为语料原文逐字子串。",
+  "metrics_note": "检索匹配规则：file_name == doc 且 chunk_text 包含 fragments 任一子串。",
+  "questions": [
+    {
+      "id": "ec-pre-001",
+      "query": "星曜X1 Pro 的电池容量是多少？",
+      "answer": "5000mAh",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "5000mAh 大容量电池"
+      ],
+      "intent": "pre_sales",
+      "category": "产品参数"
+    },
+    {
+      "id": "ec-pre-002",
+      "query": "星曜X1 Pro 支持多少瓦的有线快充？",
+      "answer": "120W 有线快充",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "120W 有线快充"
+      ],
+      "intent": "pre_sales",
+      "category": "充电"
+    },
+    {
+      "id": "ec-pre-003",
+      "query": "星曜X1 Pro 充满电大约需要多长时间？",
+      "answer": "约 25 分钟即可充满",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "约 25 分钟即可充满"
+      ],
+      "intent": "pre_sales",
+      "category": "充电"
+    },
+    {
+      "id": "ec-pre-004",
+      "query": "星曜X1 Pro 的屏幕尺寸和材质是什么？",
+      "answer": "6.7 英寸 AMOLED 2K 曲面屏",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "6.7 英寸 AMOLED 2K 曲面屏"
+      ],
+      "intent": "pre_sales",
+      "category": "屏幕"
+    },
+    {
+      "id": "ec-pre-005",
+      "query": "星曜X1 Pro 12GB+256GB 版本卖多少钱？",
+      "answer": "4299 元",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "4299 元"
+      ],
+      "intent": "pre_sales",
+      "category": "价格"
+    },
+    {
+      "id": "ec-pre-006",
+      "query": "星曜X1 Pro 搭载的处理器是哪一款？",
+      "answer": "骁龙 8 Gen 3 处理器",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "骁龙 8 Gen 3 处理器"
+      ],
+      "intent": "pre_sales",
+      "category": "产品参数"
+    },
+    {
+      "id": "ec-pre-007",
+      "query": "星曜X1 Pro 支持无线充电吗？",
+      "answer": "支持 50W 无线充电与 10W 反向无线充电",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "50W 无线充电"
+      ],
+      "intent": "pre_sales",
+      "category": "充电"
+    },
+    {
+      "id": "ec-pre-008",
+      "query": "星曜X1 Pro 有哪些颜色可选？",
+      "answer": "曜石黑、星河银、晨曦金",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "曜石黑、星河银、晨曦金"
+      ],
+      "intent": "pre_sales",
+      "category": "外观"
+    },
+    {
+      "id": "ec-pre-009",
+      "query": "星曜X1 的电池容量是多少？",
+      "answer": "4300mAh",
+      "doc": "星曜X1产品手册.md",
+      "fragments": [
+        "4300mAh 电池"
+      ],
+      "intent": "pre_sales",
+      "category": "产品参数"
+    },
+    {
+      "id": "ec-pre-010",
+      "query": "星曜X1 的起售价是多少？",
+      "answer": "2399 元（8GB+256GB）",
+      "doc": "星曜X1产品手册.md",
+      "fragments": [
+        "2399 元"
+      ],
+      "intent": "pre_sales",
+      "category": "价格"
+    },
+    {
+      "id": "ec-pre-011",
+      "query": "星曜平板 Pad10 的电池容量是多少？",
+      "answer": "8000mAh",
+      "doc": "星曜平板Pad10产品手册.md",
+      "fragments": [
+        "8000mAh 大容量电池"
+      ],
+      "intent": "pre_sales",
+      "category": "产品参数"
+    },
+    {
+      "id": "ec-pre-012",
+      "query": "星曜平板 Pad10 卖多少钱？",
+      "answer": "2299 元",
+      "doc": "星曜平板Pad10产品手册.md",
+      "fragments": [
+        "2299 元"
+      ],
+      "intent": "pre_sales",
+      "category": "价格"
+    },
+    {
+      "id": "ec-pre-013",
+      "query": "星曜手机支持 5G 网络吗？",
+      "answer": "支持 5G 双卡双待，需运营商 5G 套餐与信号覆盖",
+      "doc": "星曜手机常见问题FAQ.md",
+      "fragments": [
+        "支持 5G 双卡双待"
+      ],
+      "intent": "pre_sales",
+      "category": "网络"
+    },
+    {
+      "id": "ec-pre-014",
+      "query": "星曜 X1 有 3.5mm 耳机孔吗？",
+      "answer": "有，星曜 X1 保留 3.5mm 耳机孔；X1 Pro 没有",
+      "doc": "星曜手机常见问题FAQ.md",
+      "fragments": [
+        "星曜 X1 保留 3.5mm 耳机孔"
+      ],
+      "intent": "pre_sales",
+      "category": "接口"
+    },
+    {
+      "id": "ec-aft-001",
+      "query": "商品签收后多少天内可以申请 7 天无理由退货？",
+      "answer": "自商品签收之日起 7 日内",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "自商品签收之日起 7 日内"
+      ],
+      "intent": "after_sales",
+      "category": "退换货"
+    },
+    {
+      "id": "ec-aft-002",
+      "query": "7 天无理由退货需要满足什么条件？",
+      "answer": "商品未激活、包装与配件完好、赠品齐全",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "商品未激活、包装与配件完好、赠品齐全"
+      ],
+      "intent": "after_sales",
+      "category": "退换货"
+    },
+    {
+      "id": "ec-aft-003",
+      "query": "无理由退货的运费由谁承担？",
+      "answer": "由用户承担；质量问题退货由商家承担",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "运费由用户承担"
+      ],
+      "intent": "after_sales",
+      "category": "运费"
+    },
+    {
+      "id": "ec-aft-004",
+      "query": "签收后多少天内出现性能故障可以换货？",
+      "answer": "自商品签收之日起 15 日内",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "自商品签收之日起 15 日内"
+      ],
+      "intent": "after_sales",
+      "category": "换货"
+    },
+    {
+      "id": "ec-aft-005",
+      "query": "手机的整机保修期是多久？",
+      "answer": "整机保修期为 1 年",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "整机保修期为 1 年"
+      ],
+      "intent": "after_sales",
+      "category": "保修"
+    },
+    {
+      "id": "ec-aft-006",
+      "query": "充电器等附件的保修期是多久？",
+      "answer": "6 个月",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "附件保修期为 6 个月"
+      ],
+      "intent": "after_sales",
+      "category": "保修"
+    },
+    {
+      "id": "ec-aft-007",
+      "query": "哪些情况不在保修范围内？",
+      "answer": "人为损坏、自行拆机维修、使用非官方配件造成的损坏等",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "自行拆机维修"
+      ],
+      "intent": "after_sales",
+      "category": "保修"
+    },
+    {
+      "id": "ec-aft-008",
+      "query": "退款审核通过后多久能到账？",
+      "answer": "1-3 个工作日内原路退回",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "1-3 个工作日内原路退回"
+      ],
+      "intent": "after_sales",
+      "category": "退款"
+    },
+    {
+      "id": "ec-aft-009",
+      "query": "电子发票什么时候开具？",
+      "answer": "订单签收后 7 日内开具",
+      "doc": "售后服务政策.md",
+      "fragments": [
+        "发票将在订单签收后 7 日内开具"
+      ],
+      "intent": "after_sales",
+      "category": "发票"
+    },
+    {
+      "id": "ec-aft-010",
+      "query": "现货商品下单后多久发货？",
+      "answer": "支付成功后 48 小时内发货",
+      "doc": "物流配送说明.md",
+      "fragments": [
+        "48 小时内发货"
+      ],
+      "intent": "after_sales",
+      "category": "物流"
+    },
+    {
+      "id": "ec-aft-011",
+      "query": "商城订单满多少元包邮？",
+      "answer": "满 99 元包邮，不满 99 元收取 8 元运费",
+      "doc": "物流配送说明.md",
+      "fragments": [
+        "满 99 元包邮"
+      ],
+      "intent": "after_sales",
+      "category": "运费"
+    },
+    {
+      "id": "ec-aft-012",
+      "query": "签收时发现外包装破损怎么办？",
+      "answer": "外包装破损可当场拒收，并联系在线客服说明情况",
+      "doc": "物流配送说明.md",
+      "fragments": [
+        "外包装破损可当场拒收"
+      ],
+      "intent": "after_sales",
+      "category": "物流"
+    },
+    {
+      "id": "ec-pro-001",
+      "query": "开学季活动时间是多久？",
+      "answer": "8 月 20 日至 9 月 15 日",
+      "doc": "开学季活动规则.md",
+      "fragments": [
+        "8 月 20 日至 9 月 15 日"
+      ],
+      "intent": "promotion",
+      "category": "活动时间"
+    },
+    {
+      "id": "ec-pro-002",
+      "query": "开学季订单满 3000 元能减多少？",
+      "answer": "满 3000 元减 300 元",
+      "doc": "开学季活动规则.md",
+      "fragments": [
+        "满 3000 元减 300 元"
+      ],
+      "intent": "promotion",
+      "category": "满减规则"
+    },
+    {
+      "id": "ec-pro-003",
+      "query": "以旧换新最多能补贴多少钱？",
+      "answer": "在旧机回收价基础上额外补贴最高 500 元",
+      "doc": "开学季活动规则.md",
+      "fragments": [
+        "额外补贴最高 500 元"
+      ],
+      "intent": "promotion",
+      "category": "以旧换新"
+    },
+    {
+      "id": "ec-pro-004",
+      "query": "学生认证后星曜 X1 Pro 能优惠多少？",
+      "answer": "学生专享价星曜 X1 Pro 直降 200 元",
+      "doc": "开学季活动规则.md",
+      "fragments": [
+        "星曜 X1 Pro 直降 200 元"
+      ],
+      "intent": "promotion",
+      "category": "学生价"
+    },
+    {
+      "id": "ec-pro-005",
+      "query": "满减可以和学生专享价叠加吗？",
+      "answer": "可以，满减可与学生专享价叠加，不可与店铺优惠券叠加",
+      "doc": "开学季活动规则.md",
+      "fragments": [
+        "满减可与学生专享价叠加"
+      ],
+      "intent": "promotion",
+      "category": "叠加规则"
+    },
+    {
+      "id": "ec-pro-006",
+      "query": "开学季购买星曜 X1 Pro 有什么赠品？",
+      "answer": "赠送碎屏险 1 年，前 1000 名额外赠送蓝牙耳机",
+      "doc": "开学季活动规则.md",
+      "fragments": [
+        "赠送碎屏险 1 年"
+      ],
+      "intent": "promotion",
+      "category": "赠品"
+    },
+    {
+      "id": "ec-pro-007",
+      "query": "星曜商城会员日是哪一天？",
+      "answer": "每月 28 日",
+      "doc": "会员日积分活动.md",
+      "fragments": [
+        "每月 28 日为星曜商城会员日"
+      ],
+      "intent": "promotion",
+      "category": "会员日"
+    },
+    {
+      "id": "ec-pro-008",
+      "query": "积分怎么抵扣现金？",
+      "answer": "100 积分抵 1 元，单笔订单最多抵用订单金额的 50%",
+      "doc": "会员日积分活动.md",
+      "fragments": [
+        "100 积分抵 1 元"
+      ],
+      "intent": "promotion",
+      "category": "积分"
+    },
+    {
+      "id": "ec-cmp-001",
+      "query": "星曜X1 Pro 和星曜X1 的屏幕有什么区别？",
+      "answer": "X1 Pro 为 6.7 英寸 AMOLED 2K 曲面屏，X1 为 6.1 英寸 LCD 直屏",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "6.7 英寸 AMOLED 2K 曲面屏"
+      ],
+      "intent": "comparison",
+      "category": "商品对比"
+    },
+    {
+      "id": "ec-cmp-002",
+      "query": "星曜X1 Pro 和星曜X1 哪个电池容量更大？",
+      "answer": "X1 Pro 的 5000mAh 大于 X1 的 4300mAh",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "5000mAh 大容量电池"
+      ],
+      "intent": "comparison",
+      "category": "商品对比"
+    },
+    {
+      "id": "ec-cmp-003",
+      "query": "星曜X1 Pro 和星曜X1 的快充功率分别是多少？",
+      "answer": "X1 Pro 为 120W，X1 为 67W",
+      "doc": "星曜X1Pro产品手册.md",
+      "fragments": [
+        "120W 有线快充"
+      ],
+      "intent": "comparison",
+      "category": "商品对比"
+    },
+    {
+      "id": "ec-cmp-004",
+      "query": "星曜X1 Pro 和星曜X1 哪个支持无线充电？",
+      "answer": "X1 Pro 支持 50W 无线充电，X1 不支持无线充电",
+      "doc": "星曜X1产品手册.md",
+      "fragments": [
+        "不支持无线充电"
+      ],
+      "intent": "comparison",
+      "category": "商品对比"
+    },
+    {
+      "id": "ec-cmp-005",
+      "query": "星曜X1 Pro 和星曜X1 哪个有 3.5mm 耳机孔？",
+      "answer": "X1 保留 3.5mm 耳机孔，X1 Pro 没有",
+      "doc": "星曜X1产品手册.md",
+      "fragments": [
+        "保留 3.5mm 耳机孔"
+      ],
+      "intent": "comparison",
+      "category": "商品对比"
+    },
+    {
+      "id": "ec-cmp-006",
+      "query": "星曜平板 Pad10 和星曜X1 的屏幕尺寸分别是多少？",
+      "answer": "Pad10 为 11 英寸，X1 为 6.1 英寸",
+      "doc": "星曜平板Pad10产品手册.md",
+      "fragments": [
+        "11 英寸 2.4K LCD 屏幕"
+      ],
+      "intent": "comparison",
+      "category": "商品对比"
+    },
+    {
+      "id": "ec-pre-015",
+      "query": "Redmi K80 有哪些存储版本，分别多少钱？",
+      "answer": "五个版本：12GB+256GB 2499 元、16GB+256GB 2699 元、12GB+512GB 2899 元、16GB+512GB 3199 元、16GB+1TB 3599 元",
+      "doc": "RedmiK80产品手册.md",
+      "fragments": [
+        "12GB+256GB 版本 2499 元",
+        "16GB+1TB 版本 3599 元"
+      ],
+      "intent": "pre_sales",
+      "category": "价格"
+    },
+    {
+      "id": "ec-pre-016",
+      "query": "Redmi K80 包装盒里有哪些东西？",
+      "answer": "主机×1、数据线×1、充电器×1、取卡针×1、说明书×1、保修卡×1",
+      "doc": "RedmiK80产品手册.md",
+      "fragments": [
+        "主机×1、数据线×1、充电器×1、取卡针×1、说明书×1、保修卡×1"
+      ],
+      "intent": "pre_sales",
+      "category": "包装清单"
+    },
+    {
+      "id": "ec-pre-017",
+      "query": "Redmi K80 支持无线充电吗？",
+      "answer": "不支持无线充电，仅支持 90W 有线快充",
+      "doc": "RedmiK80产品手册.md",
+      "fragments": [
+        "不支持无线充电"
+      ],
+      "intent": "pre_sales",
+      "category": "充电"
+    },
+    {
+      "id": "ec-pre-018",
+      "query": "Redmi K80 有多重？",
+      "answer": "206g",
+      "doc": "RedmiK80产品手册.md",
+      "fragments": [
+        "重量 206g"
+      ],
+      "intent": "pre_sales",
+      "category": "产品参数"
+    },
+    {
+      "id": "ec-pre-019",
+      "query": "Redmi K80 的屏幕分辨率是多少？",
+      "answer": "3200x1440 像素（2K）",
+      "doc": "RedmiK80产品手册.md",
+      "fragments": [
+        "3200x1440 像素"
+      ],
+      "intent": "pre_sales",
+      "category": "屏幕"
+    },
+    {
+      "id": "ec-pre-020",
+      "query": "Redmi K80 有 3.5mm 耳机孔吗？",
+      "answer": "没有，耳机接口与 Type-C 接口共用",
+      "doc": "RedmiK80常见问题FAQ.md",
+      "fragments": [
+        "耳机接口与 Type-C 接口共用"
+      ],
+      "intent": "pre_sales",
+      "category": "接口"
+    },
+    {
+      "id": "ec-pre-021",
+      "query": "Redmi K80 支持双卡双待吗？",
+      "answer": "支持，SIM 卡类型为 Nano-SIM 卡+Nano-SIM 卡",
+      "doc": "RedmiK80常见问题FAQ.md",
+      "fragments": [
+        "Nano-SIM 卡+Nano-SIM 卡"
+      ],
+      "intent": "pre_sales",
+      "category": "网络"
+    },
+    {
+      "id": "ec-pre-022",
+      "query": "Redmi K80 的电池容量是多少？",
+      "answer": "内置 6550mAh 锂聚合物电池，支持 90W 有线快充",
+      "doc": "RedmiK80常见问题FAQ.md",
+      "fragments": [
+        "内置 6550mAh 锂聚合物电池"
+      ],
+      "intent": "pre_sales",
+      "category": "产品参数"
+    },
+    {
+      "id": "ec-aft-013",
+      "query": "手机激活后还能申请 7 天无理由退货吗？",
+      "answer": "不能，一经激活，因留存激活痕迹，不支持七天无理由退货",
+      "doc": "RedmiK80常见问题FAQ.md",
+      "fragments": [
+        "一经激活，因留存激活痕迹，不支持七天无理由退货"
+      ],
+      "intent": "after_sales",
+      "category": "退换货"
+    },
+    {
+      "id": "ec-aft-014",
+      "query": "在京东买的自营商品多久内可以退货换货？",
+      "answer": "自客户收到商品之日起 7 日内可以退货，15 日内可以换货",
+      "doc": "京东自营售后服务政策.md",
+      "fragments": [
+        "自客户收到商品之日起 7 日内可以退货，15 日内可以换货"
+      ],
+      "intent": "after_sales",
+      "category": "退换货"
+    },
+    {
+      "id": "ec-aft-015",
+      "query": "京东 7 天无理由退货的时间从哪天开始算？",
+      "answer": "签收商品之日起七天内，按照签收后的第二天开始计算时间",
+      "doc": "京东自营售后服务政策.md",
+      "fragments": [
+        "按照签收后的第二天开始计算时间"
+      ],
+      "intent": "after_sales",
+      "category": "退换货"
+    },
+    {
+      "id": "ec-aft-016",
+      "query": "商品质量问题退货，运费由谁承担？",
+      "answer": "非客户原因（指商品质量问题）由京东承担；客户原因由客户承担，PLUS 会员由京东承担",
+      "doc": "京东退货运费与退款说明.md",
+      "fragments": [
+        "非客户原因（指商品质量问题）由京东承担"
+      ],
+      "intent": "after_sales",
+      "category": "运费"
+    },
+    {
+      "id": "ec-aft-017",
+      "query": "京东退货上门取件怎么收费？",
+      "answer": "大件商品 50 元/件，中件商品 30 元/件，其余小件商品 8 元/件",
+      "doc": "京东退货运费与退款说明.md",
+      "fragments": [
+        "其余小件商品 8 元/件"
+      ],
+      "intent": "after_sales",
+      "category": "运费"
+    },
+    {
+      "id": "ec-aft-018",
+      "query": "京东退款一般多久到账？",
+      "answer": "退款金额在 1000 元及以下可选择退京东余额，退款时效即时到账；京东 E 卡支付退款 1 个工作日左右返还",
+      "doc": "京东退货运费与退款说明.md",
+      "fragments": [
+        "退款金额在 1000 元及以下可选择退京东余额，退款时效即时到账"
+      ],
+      "intent": "after_sales",
+      "category": "退款"
+    },
+    {
+      "id": "ec-aft-019",
+      "query": "签收后才发现手机外观有异常还能申请售后吗？",
+      "answer": "请在签收后的 24 小时内提交退换货申请，可能需要提供实物照片，超时未申请将无法受理",
+      "doc": "手机数码类售后细则.md",
+      "fragments": [
+        "请在签收后的 24 小时内提交退换货申请"
+      ],
+      "intent": "after_sales",
+      "category": "物流损"
+    },
+    {
+      "id": "ec-aft-020",
+      "query": "手机维修两次都没修好，可以换机吗？",
+      "answer": "在三包有效期内经两次维修仍不能正常使用，可凭有效维修记录或凭证申请调换同型号同规格的商品",
+      "doc": "手机数码类售后细则.md",
+      "fragments": [
+        "在三包有效期内经两次维修仍不能正常使用"
+      ],
+      "intent": "after_sales",
+      "category": "三包"
+    },
+    {
+      "id": "ec-aft-021",
+      "query": "京东 211 限时达什么时候下单能当日送达？",
+      "answer": "当日上午 11：00 前付款的现货订单当日送达，当日 23：00 前付款的次日 15：00 前送达",
+      "doc": "京东配送时效说明.md",
+      "fragments": [
+        "当日上午 11：00 前付款的现货订单"
+      ],
+      "intent": "after_sales",
+      "category": "物流时效"
+    },
+    {
+      "id": "ec-aft-022",
+      "query": "京东自营商品的运费怎么收？",
+      "answer": "自营商品基础运费 6 元，订单商品实付金额满 59 元免基础运费，超重增收续重运费",
+      "doc": "京东配送时效说明.md",
+      "fragments": [
+        "自营商品基础运费 6 元，订单商品实付金额满 59 元，免基础运费"
+      ],
+      "intent": "after_sales",
+      "category": "运费"
+    },
+    {
+      "id": "ec-pro-009",
+      "query": "京东的价格保护服务是什么？",
+      "answer": "购买带价保服务标识的商品后，因同一商品价格调整导致京东价降价，在价格保护周期内可以申请退还差价",
+      "doc": "京东价格保护规则.md",
+      "fragments": [
+        "在价格保护周期内您可以申请退还差价"
+      ],
+      "intent": "promotion",
+      "category": "价保"
+    },
+    {
+      "id": "ec-pro-010",
+      "query": "正在秒杀的商品能申请价保吗？",
+      "answer": "不能，申请价格保护时，商品正在参与秒杀、抢购、商品超出限购数量的，不支持价格保护",
+      "doc": "京东价格保护规则.md",
+      "fragments": [
+        "商品正在参与秒杀、抢购、商品超出限购数量的，不支持价格保护"
+      ],
+      "intent": "promotion",
+      "category": "价保"
+    },
+    {
+      "id": "ec-pro-011",
+      "query": "京东秒杀的超级补贴价是怎么计算的？",
+      "answer": "系统根据商品的可领、可用优惠券、直降、满减等优惠活动，计算出的预计优惠后的价格，仅按购买 1 件计算",
+      "doc": "京东活动优惠规则.md",
+      "fragments": [
+        "计算出的预计优惠后的价格"
+      ],
+      "intent": "promotion",
+      "category": "秒杀"
+    },
+    {
+      "id": "ec-pro-012",
+      "query": "预售商品支付定金支持哪些支付方式？",
+      "answer": "支付定金时仅支持在线支付，不支持使用余额、礼品卡、京券等",
+      "doc": "京东活动优惠规则.md",
+      "fragments": [
+        "支付定金时仅支持在线支付"
+      ],
+      "intent": "promotion",
+      "category": "预售"
+    },
+    {
+      "id": "ec-pro-013",
+      "query": "京东以旧换新会生成几个订单？",
+      "answer": "2 个订单：旧品的回收订单和新品的购买订单",
+      "doc": "京东活动优惠规则.md",
+      "fragments": [
+        "旧品的回收订单和新品的购买订单"
+      ],
+      "intent": "promotion",
+      "category": "以旧换新"
+    },
+    {
+      "id": "ec-pro-014",
+      "query": "以旧换新的旧机已回收，新机退货的话旧机能返还吗？",
+      "answer": "不能，旧机无法返还，新机退款按订单实付金额退款，旧机款按下单时估价自动返还",
+      "doc": "京东活动优惠规则.md",
+      "fragments": [
+        "旧机无法返还"
+      ],
+      "intent": "promotion",
+      "category": "以旧换新"
+    }
+  ]
+}

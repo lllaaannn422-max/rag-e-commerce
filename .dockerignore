@@ -1,0 +1,13 @@
+# ===== Docker 构建上下文排除（避免把大文件打进镜像） =====
+.git
+Qwen3-Embedding-0.6B/
+data/milvus.db/
+docs_archive/
+raw_corpus/
+logs/
+*.log
+__pycache__/
+.idea/
+.env
+eval/
+test/

@@ -1,0 +1,107 @@
+{
+  "orders": [
+    {
+      "order_id": "YX20260815001",
+      "user": "张伟",
+      "created_at": "2026-08-31 19:40",
+      "status": "配送中",
+      "items": [
+        {"name": "星曜X1 Pro 12+256G 曜石黑", "qty": 1, "price": 4299}
+      ],
+      "total_amount": 4299,
+      "payment": "支付宝",
+      "shipping": {
+        "carrier": "顺丰速运",
+        "tracking_no": "SF1390521123456",
+        "timeline": [
+          {"time": "昨日 21:02", "event": "已揽收（深圳福田仓）"},
+          {"time": "今日 08:41", "event": "运输中，已到达武汉转运中心"},
+          {"time": "今日 09:15", "event": "派送中，快递员王师傅 138****2233"}
+        ],
+        "estimated_delivery": "今日 18:00 前"
+      }
+    },
+    {
+      "order_id": "YX20260802008",
+      "user": "李娜",
+      "created_at": "2026-08-02 20:11",
+      "status": "已签收",
+      "items": [
+        {"name": "星曜X1 8+256G 星河银", "qty": 1, "price": 2399}
+      ],
+      "total_amount": 2399,
+      "payment": "微信支付",
+      "shipping": {
+        "carrier": "顺丰速运",
+        "tracking_no": "SF1390520088123",
+        "timeline": [
+          {"time": "2026-08-03 09:30", "event": "已揽收"},
+          {"time": "2026-08-05 14:02", "event": "已签收（本人签收）"}
+        ]
+      }
+    },
+    {
+      "order_id": "YX20260728003",
+      "user": "王强",
+      "created_at": "2026-07-28 15:40",
+      "status": "退款中",
+      "items": [
+        {"name": "星曜X1 8+256G 曜石黑", "qty": 1, "price": 2399}
+      ],
+      "total_amount": 2399,
+      "payment": "支付宝",
+      "refund": {
+        "reason": "7天无理由退货",
+        "apply_time": "2026-07-30 11:20",
+        "check_time": "2026-08-01 10:05",
+        "expected_refund_time": "1-3个工作日原路退回至支付宝"
+      }
+    },
+    {
+      "order_id": "YX20260809012",
+      "user": "赵敏",
+      "created_at": "2026-08-09 22:47",
+      "status": "待付款",
+      "items": [
+        {"name": "星曜X1 Pro 16+512G 晨曦金", "qty": 1, "price": 4799}
+      ],
+      "total_amount": 4799,
+      "payment": "",
+      "note": "订单保留至 2026-08-10 22:47，超时自动取消"
+    },
+    {
+      "order_id": "YX20260820005",
+      "user": "孙丽",
+      "created_at": "2026-08-31 09:12",
+      "status": "已发货",
+      "items": [
+        {"name": "星曜平板Pad10 12+256G", "qty": 1, "price": 2299}
+      ],
+      "total_amount": 2299,
+      "payment": "支付宝",
+      "shipping": {
+        "carrier": "EMS",
+        "tracking_no": "EM123456789CN",
+        "timeline": [
+          {"time": "昨日 19:05", "event": "已揽收（北京朝阳仓）"}
+        ],
+        "estimated_delivery": "2026-09-03 前"
+      }
+    },
+    {
+      "order_id": "YX20260825021",
+      "user": "周杰",
+      "created_at": "2026-08-25 16:30",
+      "status": "退款成功",
+      "items": [
+        {"name": "星曜X1 Pro 12+256G 曜石黑", "qty": 1, "price": 4299}
+      ],
+      "total_amount": 4299,
+      "payment": "支付宝",
+      "refund": {
+        "reason": "质量问题换货转退款",
+        "refund_time": "2026-08-28 10:12"
+      }
+    }
+  ]
+}

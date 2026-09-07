@@ -1,0 +1,159 @@
+{
+  "description": "RAG 系统评测金标准集。所有题目的答案句子均已在 docs/ 对应小说文本中人工核对存在（基于 grep 验证）。fragments 用于判定检索结果是否相关：命中条件 = 检索 chunk 的 file_name 与 doc 一致，且 chunk_text 包含任一 fragment。",
+  "metrics_note": "hit@k / precision@k / frag_recall@k / mrr / ndcg@k 由 eval/eval_retrieval.py 计算；faithfulness / answer_relevancy 由 eval/eval_generation.py 通过 DeepSeek judge 打分。",
+  "questions": [
+    {
+      "id": "xajh-001",
+      "query": "令狐冲的师父是谁？",
+      "answer": "岳不群（华山派掌门，人称君子剑）",
+      "doc": "金庸-笑傲江湖.txt",
+      "fragments": ["岳不群", "华山掌门"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "xajh-002",
+      "query": "风清扬传授给令狐冲的剑法叫什么？",
+      "answer": "独孤九剑",
+      "doc": "金庸-笑傲江湖.txt",
+      "fragments": ["独孤九剑", "风清扬"],
+      "intent": "fiction",
+      "category": "武学功法"
+    },
+    {
+      "id": "xajh-003",
+      "query": "令狐冲最终与谁结为夫妻？",
+      "answer": "任盈盈（任我行之女）",
+      "doc": "金庸-笑傲江湖.txt",
+      "fragments": ["任盈盈", "盈盈"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "xajh-004",
+      "query": "东方不败修炼的武功秘籍是什么？",
+      "answer": "《葵花宝典》（任我行传给东方不败）",
+      "doc": "金庸-笑傲江湖.txt",
+      "fragments": ["葵花宝典", "东方不败"],
+      "intent": "fiction",
+      "category": "武学功法"
+    },
+    {
+      "id": "ytlj-001",
+      "query": "张无忌在明教担任什么职位？",
+      "answer": "教主",
+      "doc": "金庸-倚天屠龙记.txt",
+      "fragments": ["教主"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "ytlj-002",
+      "query": "张无忌在光明顶秘道练成了什么神功？",
+      "answer": "乾坤大挪移",
+      "doc": "金庸-倚天屠龙记.txt",
+      "fragments": ["乾坤大挪移"],
+      "intent": "fiction",
+      "category": "武学功法"
+    },
+    {
+      "id": "ytlj-003",
+      "query": "太极拳是由谁创制的？",
+      "answer": "张三丰",
+      "doc": "金庸-倚天屠龙记.txt",
+      "fragments": ["张三丰", "太极拳"],
+      "intent": "fiction",
+      "category": "武学功法"
+    },
+    {
+      "id": "ytlj-004",
+      "query": "张无忌的义父是谁？",
+      "answer": "谢逊（金毛狮王）",
+      "doc": "金庸-倚天屠龙记.txt",
+      "fragments": ["谢逊"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "ytlj-005",
+      "query": "张无忌的父亲是谁？",
+      "answer": "张翠山",
+      "doc": "金庸-倚天屠龙记.txt",
+      "fragments": ["张翠山"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "tlb-001",
+      "query": "乔峰曾经是哪个帮派的帮主？",
+      "answer": "丐帮",
+      "doc": "金庸-天龙八部.txt",
+      "fragments": ["丐帮帮主", "丐帮"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "tlb-002",
+      "query": "段誉在大理天龙寺学到了什么武学？",
+      "answer": "六脉神剑",
+      "doc": "金庸-天龙八部.txt",
+      "fragments": ["六脉神剑"],
+      "intent": "fiction",
+      "category": "武学功法"
+    },
+    {
+      "id": "tlb-003",
+      "query": "段誉练成的奇妙轻功叫什么？",
+      "answer": "凌波微步",
+      "doc": "金庸-天龙八部.txt",
+      "fragments": ["凌波微步"],
+      "intent": "fiction",
+      "category": "武学功法"
+    },
+    {
+      "id": "tlb-004",
+      "query": "虚竹成为了什么门派的主人？",
+      "answer": "灵鹫宫（天山缥缈峰灵鹫宫主人）",
+      "doc": "金庸-天龙八部.txt",
+      "fragments": ["灵鹫宫主人", "灵鹫宫"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "xkx-001",
+      "query": "石破天小时候被母亲叫做什么名字？",
+      "answer": "狗杂种",
+      "doc": "金庸-侠客行.txt",
+      "fragments": ["狗杂种"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "xkx-002",
+      "query": "侠客岛的使者邀请武林高手去岛上做什么？",
+      "answer": "喝腊八粥",
+      "doc": "金庸-侠客行.txt",
+      "fragments": ["腊八粥", "侠客岛"],
+      "intent": "fiction",
+      "category": "情节设定"
+    },
+    {
+      "id": "ynj-001",
+      "query": "越女剑这部小说的女主角是谁？",
+      "answer": "阿青",
+      "doc": "金庸-越女剑.txt",
+      "fragments": ["阿青"],
+      "intent": "fiction",
+      "category": "人物关系"
+    },
+    {
+      "id": "ynj-002",
+      "query": "范蠡想让阿青教越国武士剑术，用来对付哪个国家？",
+      "answer": "吴国",
+      "doc": "金庸-越女剑.txt",
+      "fragments": ["吴国"],
+      "intent": "fiction",
+      "category": "情节设定"
+    }
+  ]
+}

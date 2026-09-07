@@ -1,0 +1,37 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ===== IDE / OS =====
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# ===== 密钥与本地环境（真实验证码请勿提交） =====
+.env
+
+# ===== 大模型权重与 HF 模型目录（>4GB，按需下载，勿入库） =====
+Qwen3-Embedding-0.6B/
+
+# ===== 向量库 / 日志（可重建可再生成） =====
+data/milvus.db/
+logs/
+*.log
+
+# ===== 版权语料（金庸小说全文，仅本地使用） =====
+docs_archive/
+raw_corpus/
+
+# ===== 评测产物（脚本入库，产物不入库） =====
+eval/results*.json
+eval/report*.md
+eval/*.log
+
+# ===== 其他 =====
+whoosh_index/
+.cache/
